@@ -1,0 +1,23 @@
+{
+  "name": "etrack-web",
+  "version": "1.0.0",
+  "description": "js lib for front-end event track",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/349989153/eTrack-web.git"
+  },
+  "keywords": [
+    "event",
+    "track"
+  ],
+  "author": "luyang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/349989153/eTrack-web/issues"
+  },
+  "homepage": "https://github.com/349989153/eTrack-web#readme"
+}
