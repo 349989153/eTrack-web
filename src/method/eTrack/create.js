@@ -1,15 +1,13 @@
 /**
  * Created by luyang on 2017/6/1.
  */
-
-import eTrack from './index';
 import Tracker from '../../class/Tracker';
 
 /**
  * eTrack.create('UA-XXXXX-Y', 'auto', 'name', {});
  * eTrack.create({trackingId: 'UA-XXXXX-Y', cookieDomain: 'auto', trackerName: 'name' ...})
  */
-eTrack.prototype.create = function () {
+export default function () {
 
     let createParams = {};
     /**
@@ -20,9 +18,12 @@ eTrack.prototype.create = function () {
         arguments[0] && (createParams['trackingId'] = arguments[0]);
         arguments[1] && (createParams['cookieDomain'] = arguments[1]);
         arguments[2] && (createParams['trackerName'] = arguments[2]);
-        arguments[3] && (createParams = Object.assign({}, createParams, arguments[3]))
+        arguments[3] && (createParams = Object.assign({}, createParams, arguments[3]));
     } else {
         createParams = arguments[0];
+    }
+    if (this.getByName(createParams['trackerName']) !== undefined) {
+        throw new Error(`Tracker named '${createParams['trackerName']}' already exist!`);
     }
     let tracker = new Tracker(createParams);
     this.trackers.push(tracker);

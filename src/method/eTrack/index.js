@@ -1,8 +1,12 @@
 /**
  * Created by luyang on 2017/6/1.
  */
+import create from './create';
+import getAll from './getAll';
+import getByName from './getByName';
+import remove from './remove';
 
-export default function eTrack () {
+function eTrack () {
     /**
      * 处理参数
      * 如：
@@ -17,5 +21,16 @@ export default function eTrack () {
      * 存放Trackers的地方
      * @type {Array}
      */
-    this.trackers = [];
+    // this.trackers = [];
+    // this.create = create;
+    // this.getAll = getAll;
+    // this.getByName = getByName;
+    // this.remove = remove;
 }
+eTrack.trackers = [];
+eTrack.create = create;
+eTrack.getAll = getAll;
+eTrack.getByName = getByName;
+eTrack.remove = remove;
+
+module.exports = eTrack;

@@ -11,7 +11,7 @@ export default function (url) {
     img.onload = img.onerror = img.onabort = function () {
         img.onload = img.onerror = img.onabort = null;
         img = window[id] = null;
-    }
+    };
     window[id] = img;
     img.src = url;
 }
