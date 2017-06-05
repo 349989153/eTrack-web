@@ -10,6 +10,6 @@
  * 在最开始的时候，使用create方法，参数传入uid，来保证这些事件都会记录到这个uid名下。
  * 然后调用send方法给服务器发请求
  */
-import eTrack from './method/eTrack';
+import eTrack from './eTrack';
 
 export default eTrack;

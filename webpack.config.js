@@ -5,7 +5,7 @@ var path = require('path');
 
 module.exports = {
     // entry: './src/index.js',
-    entry: './src/method/eTrack/index.js',
+    entry: './src/eTrack/index.js',
     output: {
         filename: 'eTrack.js',
         path: path.resolve(__dirname, 'dist'),

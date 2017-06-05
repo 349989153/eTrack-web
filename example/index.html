@@ -17,8 +17,15 @@
 <body>
 <script>
     eTrack.create('UA-XXXXX-Y', 'auto');
-    eTrack.create('UA-XXXXX-Y', 'auto', 'tracker1');
-    console.log(eTrack.getByName('tracker1'));
+    eTrack.create('TID-0456891', 'auto', 'tracker1');
+    eTrack.remove();
+//    eTrack.send({
+//        name: 'tracker1',
+//        eventName: 'click',
+//        page: 'fundManage'
+//    });
+    eTrack.send('tracker1', {eventName: 'view', json: {width: 1920, height: 1080}});
+    console.log(eTrack.getAll());
 </script>
 </body>
 </html>

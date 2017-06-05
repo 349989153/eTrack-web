@@ -1,7 +1,7 @@
 /**
  * Created by luyang on 2017/6/1.
  */
-import Tracker from '../../class/Tracker';
+import Tracker from '../Tracker/index';
 
 /**
  * eTrack.create('UA-XXXXX-Y', 'auto', 'name', {});
